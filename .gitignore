@@ -1,6 +1,6 @@
 # Ignore .env file that contains API keys
 .env
-
+*.json
 # Ignore compiled Python files
 __pycache__/
 *.pyc

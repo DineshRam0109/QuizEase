@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0c0c0d;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            background: #1b0ab8;
+            padding: 40px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ecf717;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="file"],
+        input[type="number"],
+        select,
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #28d679;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ef3ec3;
+        }
+
+        #microphone-icon {
+            display: block;
+            margin: 30px auto;
+            background-color: #ff3300;
+            color: white;
+            padding: 15px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #microphone-icon:hover {
+            background-color: #38ebeb;
+            transform: scale(1.05);
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            height: 10px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0;
+            background-color: #4caf50;
+            border-radius: 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>QuizEase - AI Powered MCQ Generator</h1>
+        <form id="mcq-form" action="/generate" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Upload your document (PDF, TXT, DOCX)</label>
+                <input type="file" name="file" required>
+            </div>
+            <div class="form-group">
+                <label for="num_questions">Number of Questions</label>
+                <input type="number" id="questionField" name="num_questions" value="0" min="1" max="100" required>
+            </div>
+            <div class="form-group">
+                <label for="language">Select Language</label>
+                <select id="language" name="language" required>
+                    <option value="english">English</option>
+                    <option value="hi">Hindi</option>
+                    <option value="ta">Tamil</option>
+                    <option value="gu">Gujarati</option>
+                    <option value="te">Telugu</option>
+                    <option value="ml">Malayalam</option>
+                    <option value="fr">French</option>
+                </select>
+            </div>
+            <button type="submit">Generate MCQs</button>
+        </form>
+        <button id="microphone-icon"><i class="fas fa-microphone"></i> Use Voice Command</button>
+        <div class="progress-container" id="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+    </div>
+
+    <script>
+        // Speech Recognition Compatibility Check
+        window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    
+        const microphoneButton = document.getElementById('microphone-icon');
+        const questionField = document.getElementById('questionField');
+        const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+    
+        recognition.interimResults = false;
+        recognition.lang = 'en-US';
+    
+        microphoneButton.addEventListener('click', () => {
+            if (!window.SpeechRecognition) {
+                alert('Speech recognition not supported in this browser. Please use Chrome or Edge.');
+                return;
+            }
+    
+            recognition.start();
+        });
+    
+        recognition.addEventListener('result', (event) => {
+            const transcript = Array.from(event.results)
+                .map(result => result[0].transcript)
+                .join('');
+            console.log('Voice command received:', transcript);
+    
+            // Send command to the backend
+            fetch('/voice', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ command: transcript }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Response from server:', data);
+    
+                    if (data.status === 'success') {
+                        // Update the language dropdown if the response includes language
+                        if (data.language) {
+                            const languageDropdown = document.getElementById('language'); // Ensure this ID matches your HTML
+                            if (languageDropdown) {
+                                languageDropdown.value = data.language; // Match the "value" in the <option> tags
+                            } else {
+                                console.error('Language dropdown not found');
+                            }
+                        }
+    
+                        // Update the question count field if the response includes num_questions
+                        if (data.num_questions) {
+                            const questionField = document.getElementById('questionField'); // Ensure this ID matches your HTML
+                            if (questionField) {
+                                questionField.value = data.num_questions;
+                            } else {
+                                console.error('Question field not found');
+                            }
+                        }
+    
+                        // Optionally show a message to the user
+                        alert(data.message || 'Action completed successfully');
+                    } else {
+                        alert(data.message || 'Command not recognized.');
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    
+        recognition.addEventListener('end', () => {
+            console.log('Speech recognition ended.');
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,20 @@
+# Ignore .env file that contains API keys
+.env
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+venv/
+.env/
+.venv/
+
+# Ignore logs and database files
+*.log
+*.sqlite3
+
+# Ignore VS Code settings
+.vscode/

@@ -1,0 +1,39 @@
+Q1: Which programming language is NOT listed among Dinesh's technical skills?
+A) Java
+B) C#
+C) Python
+D) C++
+Correct Answer: B
+Explanation: The text explicitly lists C, C++, Python, and Java under "Programming Languages".  C# is not mentioned.
+
+Q2: Dinesh's project "MediMate" utilizes which technologies?
+A) Tableau and JavaScript
+B) AI/ML, Python, and Flask
+C) MERN stack
+D) AIML and Next.js
+Correct Answer: B
+Explanation: The description of MediMate specifically states it uses "AI/ML, Python, and Flask." The other options list technologies used in his other projects.
+
+Q3:  In which organization did Dinesh gain experience in full-stack development using the MERN stack?
+A) Codsoft
+B) Web Stack Academy
+C) National Engineering College
+D) St. Thomas Matric. Hr. Sec. School
+Correct Answer: B
+Explanation:  The text states Dinesh's internship at Web Stack Academy involved "full-stack development using MERN stack."  Codsoft focused on AI projects, while the other two are educational institutions.
+
+Q4:  What is the primary function of Dinesh's "QuizEase" project?
+A)  Real-time IPL cricket data analysis
+B)  Connecting job seekers with employers
+C)  Generating MCQs from uploaded files
+D)  Predicting potential diseases based on symptoms
+Correct Answer: C
+Explanation: The description of QuizEase states its purpose is to "effortlessly generate MCQ from uploaded files." The other options describe the functionalities of his other projects (IPL Analysis, HireConnect, and MediMate, respectively).
+
+Q5:  Which achievement highlights Dinesh's performance in competitive programming?
+A) 1st prize in CodeX2k23
+B) Ranked among the top 5% in Cloud Computing in NPTEL
+C) Solved 2670+ programs and 680th rank in Skillrack, 575+ programs in Leetcode
+D) 2nd prize in Ideathon at Coimbatore Institute of Technology
+Correct Answer: C
+Explanation: This option directly quantifies Dinesh's programming practice and ranking on competitive coding platforms, Skillrack and Leetcode. The other options refer to specific competition wins or certifications, not overall coding practice and ranking.

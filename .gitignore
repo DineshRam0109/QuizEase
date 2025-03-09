@@ -1,5 +1,6 @@
 # Ignore .env file that contains API keys
 .env
+caramel-feat-435914-k2-5dbf71e4613e.json
 *.json
 # Ignore compiled Python files
 __pycache__/

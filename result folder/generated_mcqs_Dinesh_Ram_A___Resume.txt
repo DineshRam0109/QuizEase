@@ -1,39 +1,44 @@
-Q1: Which programming language is NOT listed among Dinesh's technical skills?
-A) Java
-B) C#
-C) Python
-D) C++
-Correct Answer: B
-Explanation: The text explicitly lists C, C++, Python, and Java under "Programming Languages".  C# is not mentioned.
+ક્યૂ 1: નેશનલ એન્જિનિયરિંગ કોલેજમાંથી દિનેશ રામનું અપેક્ષિત ગ્રેજ્યુએશન વર્ષ શું છે?
+એ) 2022
+બી) 2024
+સી) 2026
+ડી) ઉલ્લેખિત નથી
 
-Q2: Dinesh's project "MediMate" utilizes which technologies?
-A) Tableau and JavaScript
-B) AI/ML, Python, and Flask
-C) MERN stack
-D) AIML and Next.js
-Correct Answer: B
-Explanation: The description of MediMate specifically states it uses "AI/ML, Python, and Flask." The other options list technologies used in his other projects.
+સાચો જવાબ: સી
+સમજૂતી: આ લખાણ સ્પષ્ટ રીતે જણાવે છે કે શિક્ષણ વિભાગમાં નેશનલ એન્જિનિયરિંગ કોલેજની એન્ટ્રી હેઠળ "અપેક્ષિત ગ્રેજ્યુએશન: 2026".
 
-Q3:  In which organization did Dinesh gain experience in full-stack development using the MERN stack?
-A) Codsoft
-B) Web Stack Academy
-C) National Engineering College
-D) St. Thomas Matric. Hr. Sec. School
-Correct Answer: B
-Explanation:  The text states Dinesh's internship at Web Stack Academy involved "full-stack development using MERN stack."  Codsoft focused on AI projects, while the other two are educational institutions.
+Q2: દિનેશ રામ દ્વારા વિકસિત કયો પ્રોજેક્ટ MERN સ્ટેકનો ઉપયોગ કરે છે?
+એ) આઈપીએલ વિશ્લેષણ
+બી) વોક્સિફાઇ
+સી) હાયર કનેક્ટ
+ડી) ક્વિઝિઝ
 
-Q4:  What is the primary function of Dinesh's "QuizEase" project?
-A)  Real-time IPL cricket data analysis
-B)  Connecting job seekers with employers
-C)  Generating MCQs from uploaded files
-D)  Predicting potential diseases based on symptoms
-Correct Answer: C
-Explanation: The description of QuizEase states its purpose is to "effortlessly generate MCQ from uploaded files." The other options describe the functionalities of his other projects (IPL Analysis, HireConnect, and MediMate, respectively).
+સાચો જવાબ: સી
+સમજૂતી: હાયર કનેક્ટ માટેનું વર્ણન સ્પષ્ટપણે ઉલ્લેખ કરે છે કે તે "MERN" નો ઉપયોગ કરીને બનાવવામાં આવ્યો હતો.આઈપીએલ વિશ્લેષણ ટેબ્લોનો ઉપયોગ કરે છે, વોક્સિફાઇનો ઉપયોગ પાયથોન અને એઆઈએમએલનો ઉપયોગ કરે છે, અને ક્વિઝેઝ એઆઈએમએલ, પાયથોન અને ફ્લાસ્કનો ઉપયોગ કરે છે.
 
-Q5:  Which achievement highlights Dinesh's performance in competitive programming?
-A) 1st prize in CodeX2k23
-B) Ranked among the top 5% in Cloud Computing in NPTEL
-C) Solved 2670+ programs and 680th rank in Skillrack, 575+ programs in Leetcode
-D) 2nd prize in Ideathon at Coimbatore Institute of Technology
-Correct Answer: C
-Explanation: This option directly quantifies Dinesh's programming practice and ranking on competitive coding platforms, Skillrack and Leetcode. The other options refer to specific competition wins or certifications, not overall coding practice and ranking.
+Q3: દિનેશ રમે કઈ પ્રોગ્રામિંગ ભાષામાં રીઅલ-ટાઇમ મલ્ટિ-ક્લાયંટ ચેટ સિસ્ટમ વિકસાવી?
+એ) પાયથોન
+બી) જાવા
+સી) સી ++
+ડી) જાવાસ્ક્રિપ્ટ
+
+સાચો જવાબ: સી
+સમજૂતી: પ્રોજેક્ટ "ચેટરલિંક" ને "સી ++ માં રીઅલ-ટાઇમ મલ્ટિ-ક્લાયંટ ચેટ સિસ્ટમ" તરીકે વર્ણવવામાં આવે છે.
+
+Q4: દિનેશ રામને પૂરા પાડવામાં આવેલા ટેક્સ્ટ અનુસાર કયો એવોર્ડ મળ્યો નથી?
+એ) કોડેક્સ 2 કે 23 માં 1 લી ઇનામ
+બી) ઇડિથનમાં 2 જી ઇનામ
+સી) શ્રી એશ્વર કોલેજ Engineering ફ એન્જિનિયરિંગમાં તકનીકી ક્વિઝમાં 3 જી ઇનામ
+ડી) હેકાથોનમાં 1 લી ઇનામ
+
+સાચો જવાબ: ડી
+સમજૂતી: જ્યારે ટેક્સ્ટમાં અસંખ્ય પુરસ્કારો અને સિદ્ધિઓનો ઉલ્લેખ કરવામાં આવ્યો છે, ત્યાં ડિનેશ રામ હેકાથોનમાં 1 લી ઇનામ જીતવાનો કોઈ ઉલ્લેખ નથી.અન્ય તમામ વિકલ્પો સિદ્ધિઓ વિભાગમાં સ્પષ્ટ રીતે સૂચિબદ્ધ છે.
+
+Q5: દિનેશ રામના પ્રમાણપત્રોમાં કયા learning નલાઇન લર્નિંગ પ્લેટફોર્મનો ઉલ્લેખ છે?
+કય
+બી) ઇડીએક્સ
+સી) યુડેમી
+ડી) ખાન એકેડેમી
+
+સાચો જવાબ: સી
+સમજૂતી: પ્રમાણપત્રો વિભાગમાં "ઉડેમી - એઆઈ એસેન્શિયલ્સ પરિચય માટે કૃત્રિમ બુદ્ધિ" ની સૂચિ છે.અન્ય પ્લેટફોર્મનો ઉલ્લેખ નથી.
